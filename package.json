@@ -1,0 +1,16 @@
+{
+  "name": "ecomarket_v1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "frontend": "npm run start --prefix frontend",
+  "backend": "npm run dev --prefix backend",
+  "dev-all": "concurrently \"npm run backend\" \"npm run frontend\""
+},
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
