@@ -62,6 +62,20 @@ export const AuthProvider = ({ children }) => {
 		}
 	};
 
+	const loginWithGoogle = async (googleToken) => {
+			setLoading(true);
+			try {
+				// Assumptions: your authApi service has a googleLogin method matching your routes
+				const { data } = await authApi.googleLogin({ token: googleToken });
+				syncAuth(data);
+				return { ok: true, data };
+			} catch (error) {
+				return { ok: false, message: getFriendlyError(error, "Google authentication failed") };
+			} finally {
+				setLoading(false);
+			}
+		};
+
 	const logout = () => {
 		localStorage.removeItem("token");
 		localStorage.removeItem("user");
@@ -77,6 +91,7 @@ export const AuthProvider = ({ children }) => {
 			loading,
 			login,
 			register,
+			loginWithGoogle,
 			logout,
 		}),
 		[user, token, loading]

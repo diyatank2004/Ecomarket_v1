@@ -1,3 +1,17 @@
-# https://www.robotstxt.org/robotstxt.html
+# Target all search engine crawlers
 User-agent: *
-Disallow:
+
+# Block bots from crawling private customer and vendor pages
+Disallow: /cart
+Disallow: /checkout
+Disallow: /wishlist
+Disallow: /customer/dashboard
+Disallow: /vendor/dashboard
+Disallow: /api/               # Protects your backend API endpoints
+Disallow: /search             # Keeps bots from spamming your internal search results page
+
+# Allow bots to crawl everything else
+Allow: /
+
+# Tell search engines where to find your XML sitemap (Crucial for SEO!)
+Sitemap: https://www.ecomarket.com/sitemap.xml

@@ -118,20 +118,6 @@
   background: #e4ece0;
 }
 
-.google-btn {
-  width: 100%;
-  border-radius: 999px;
-  border: 1px solid #d7e3d4;
-  background: #fff;
-  color: #364b3d;
-  padding: 0.66rem;
-  font: 700 0.9rem 'Manrope', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-}
-
 .auth-footer {
   margin-top: 0.95rem;
   text-align: center;

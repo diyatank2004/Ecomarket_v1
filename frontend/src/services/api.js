@@ -18,6 +18,7 @@ API.interceptors.request.use((req) => {
 export const authApi = {
   register: (payload) => API.post("/auth/register", payload),
   login: (payload) => API.post("/auth/login", payload),
+  googleLogin: (payload) => API.post("/auth/google", payload),
 };
 
 export const productsApi = {

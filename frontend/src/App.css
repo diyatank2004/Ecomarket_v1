@@ -71,10 +71,9 @@ a {
 }
 
 .logo-icon {
-  width: 36px;
-  height: 36px;
+  width: 41px;
+  height: 41px;
   border-radius: 12px;
-  background: linear-gradient(145deg, #1a7f4f 0%, #255f45 100%);
   display: grid;
   place-items: center;
   box-shadow: 0 10px 20px rgba(37, 95, 69, 0.28);
